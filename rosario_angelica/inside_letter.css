@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4c3 0%, #c8e6c9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #288b2d; 
+    margin-bottom: 20px;
+}
+
+.content-box {
+    background-color: #f1f8e9; 
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #c8e6c9; 
+}
+
+p {
+    color: #43b347;
+    line-height: 1.6;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #c8e6c9; 
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #388e3c;
+}
+
+.welcome-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #288b2d;
+}
+
+.welcome-container p {
+    font-size: 1.2em;
+    color: #43b347; 
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.container.hidden {
+    display: none;
+}
+
+.container {
+    animation: fadeInContent 2s ease-in-out;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block; 
+}
+
+.hidden {
+    display: none;
+}
